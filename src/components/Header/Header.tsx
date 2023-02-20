@@ -1,19 +1,24 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { Avatar, Menu, MenuItem, Tooltip } from '@mui/material';
+import {
+	Avatar,
+	Menu,
+	MenuItem,
+	Tooltip,
+	Button,
+	Typography,
+	Toolbar,
+	ListItemButton,
+	ListItemText,
+	ListItem,
+	List,
+	IconButton,
+	Drawer,
+	Divider,
+	CssBaseline,
+	Box,
+	AppBar,
+} from '@mui/material';
 import { Link } from 'react-router-dom';
 import { MainHeaderLayout } from './Header.styles';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -34,11 +39,8 @@ export function Header(props: Props) {
 		null,
 	);
 
+	const handleDrawerToggle = () => setMobileOpen((prevState) => !prevState);
 	const navigate = useNavigate();
-
-	const handleDrawerToggle = () => {
-		setMobileOpen((prevState) => !prevState);
-	};
 
 	const drawer = (
 		<Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
